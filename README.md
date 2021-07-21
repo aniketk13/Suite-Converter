@@ -1,5 +1,5 @@
 # Suite-Converter-Python
-## Smart solution to convert your files from one format to another.
+### Smart solution to convert your files from one format to another.
 <div align="center"><img src="Images/key.JPG" width="480"></div>
 
 
