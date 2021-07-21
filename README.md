@@ -41,7 +41,7 @@ pip install pysttx3
 ### Refer-link
 [![Youtube](https://img.shields.io/badge/-Youtube%20-red)](https://youtu.be/FKwicZF7xNE)
 
-# Connect-With-Us-On_LinkDin
+# Connect-With-Us-On-Linkdin
 ![LINKEDIN](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
 - [Aarush Srivastava](https://www.linkedin.com/in/aarush-srivastava/) - [Aniket Khajanchi](https://www.linkedin.com/in/aniket-khajanchi/) - [Nitish Sharma](https://www.linkedin.com/in/itsnitish22/)- [Pranav Goel](https://www.linkedin.com/in/iipranavii/)
 
