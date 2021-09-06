@@ -18,10 +18,13 @@ engine.setProperty('voice', voices[1].id)
 # Integer speech rate in words per minute, can be increased or decreased to change speed of speech
 engine.setProperty('rate', 145)
 
-print("Enter the name of file with extension:")
-speak("Enter the name of file with extension")
+print("Enter the name of file without extension:")
+speak("Enter the name of file without extension")
 name = input()
-# convert(name)
-convert(name, r"C:\Users\ANIKET KHAJANCHI\Downloads\Project2", name)
+docfile = r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Input Directory\\"+name+".docx"
+address = r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Output Directory\\" + \
+    name+"-converted.pdf"
+
+convert(docfile, address)
 
 # print("Your file has been converted successfully".center(400))
