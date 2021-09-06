@@ -23,13 +23,21 @@ name2=input()
 print("Enter current file's extension:")
 speak("Enter current file's extension")
 name4=input()
+
+file1 = "D:\Own Work\Python Project\Suite-Converter\Input Directory\\"+ name2 + name4
+
 print("Enter the extension in which you want your new file:")
 speak("Enter the extension in which you want your new file")
 name3=input()
 
-im = Image.open(name2+name4)        #Opening the image file that is to be converted
+file2 = "D:\Own Work\Python Project\Suite-Converter\Output Directory\\" + name2 + name3
+
+# im = Image.open(name2+name4)        #Opening the image file that is to be converted
+im = Image.open(file1)        #Opening the image file that is to be converted
 
 rgb_im = im.convert('RGB')          #Converting RGBA image into RGB type
-rgb_im.save(name2+name3)            #Saving the new converted image
+# rgb_im.save(name2+name3)            #Saving the new converted image
+
+rgb_im.save(file2)            #Saving the new converted image
 
 print("Your file has been converted successfully".center(400))
