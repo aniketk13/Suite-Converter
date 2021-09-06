@@ -25,7 +25,7 @@ voices = engine.getProperty('voices')
 # String identifier of the active voice
 engine.setProperty('voice', voices[1].id)
 # Integer speech rate in words per minute, can be increased or decreased to change speed of speech
-engine.setProperty('rate', 145)
+engine.setProperty('rate', 250)
 
 # Introduction
 print("Welcome to the Suite Converter\n".center(400))
@@ -55,22 +55,23 @@ def takecom():
     # Listening the choice in audio form
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Say the option....\n".center(400))
-        speak("Say the option")
-        audio = r.listen(source)
+        # print("Enter the option....\n".center(400))
+        # audio = r.listen(source)
+        speak("Enter the option")
+        choiceinput = (input("Enter the option....\n".center(400)))
 
-    # Recognising and converting the choice in text
-    try:
-        print("Recognising....")
-        text = r.recognize_google(audio, language='en-in')
-        print(text, "\n")
+    # # Recognising and converting the choice in text
+    # try:
+    #     print("Recognising....")
+    #     text = r.recognize_google(audio, language='en-in')
+    #     print(text, "\n")
 
-    # Backup if choice not understood
-    except Exception:
-        speak("Error...")
-        print("Try Again..")
-        return "none"
-    return text
+    # # Backup if choice not understood
+    # except Exception:
+    #     speak("Error...")
+    #     print("Try Again..")
+    #     return "none"
+    return choiceinput
 
 
 # for main function
@@ -78,33 +79,33 @@ if __name__ == "__main__":
 
     # Checking for choice and calling the respective python scripts
     while (1):
-        query = takecom().lower()
+        query = takecom()
 
-        if 'first' in query:
+        if "1" in query:
             # Calling file for docx to pdf conversion
             call(["python", "doc2pdf.py"])
             print("Your file has been converted successfully".center(400))
 
-        elif 'second' in query:
+        elif "2" in query:
             call(["python", "pdf2doc.py"])  # Calling file for pdf to docx
 
-        elif 'third' in query:
+        elif "3" in query:
             # Calling file for Text to speech
             call(["python", "text2speech.py"])
 
-        elif 'fourth' in query:
+        elif "4" in query:
             # Calling file for speech to text
             call(["python", "speech2text.py"])
 
-        elif 'fifth' in query or '5' in query:
+        elif "5" in query or '5' in query:
             # Calling file for multiple images to pdf
             call(["python", "images2pdf.py"])
 
-        elif 'sixth' in query or 'six' in query:
+        elif "6" in query or 'six' in query:
             # Calling file for pdf to multiple images
             call(["python", "pdf2images.py"])
 
-        elif 'seventh' in query:
+        elif "7" in query:
             call(["python", "imageconv.py"])  # Interconversion of Images
 
         elif query == 'none':  # If no choice given
