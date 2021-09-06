@@ -19,13 +19,17 @@ engine.setProperty('voice', voices[1].id)
 engine.setProperty('rate', 145)
 
 
-print("Enter name of the file with extension:\n")
-speak("Enter name of the file with extension")
+print("Enter name of the file without extension:\n")
+speak("Enter name of the file without extension")
+inputdir = r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Input Directory\\"
 name1 = input()
-with open(name1, encoding="utf-8") as file:  # Opening the text file and reading the text
+# Opening the text file and reading the text
+with open(inputdir+name1+".txt", encoding="utf-8") as file:
     file = file.read()
 
 speak = gTTS(file, lang='en')  # Speaking text to audio
-speak.save("converted.mp3")  # Saving the converted audio file
+# Saving the converted audio file
+speak.save(r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Output Directory\\" +
+           name1+"converted.mp3")
 
 print("Your file has been converted successfully".center(400))
