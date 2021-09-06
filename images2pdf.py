@@ -22,17 +22,23 @@ n = input()
 n = int(n)
 
 im_list = []
-pdf1_filename = r"converted.pdf"       #declaring the pdf file to be saved
+
+file1 = "D:\Own Work\Python Project\Suite-Converter\Output Directory\\" + "images-compiled.pdf" 
+
+pdf1_filename = file1       #declaring the pdf file to be saved
+
+# file2 = "D:\Own Work\Python Project\Suite-Converter\Input Directory\\"
 
 print("Enter name of first file with extension:")     #Taking first image file
 speak("Enter name of first file with extension")
-name = input()
+name = r"D:\Own Work\Python Project\Suite-Converter\Input Directory\\"+input()
 im1 = Image.open(name)
 
 for i in range(n-1):
     print("Enter name of another file with extension:\n")     #Taking rest of the image files
     speak("Enter name of another file with extension")
-    name = input()
+    # name = input()
+    name = r"D:\Own Work\Python Project\Suite-Converter\Input Directory\\"+input()
     im_list.append(Image.open(name))
 
 im1.save(pdf1_filename, "PDF", resolution=100.0,save_all=True, append_images=im_list)       #Saving the pdf file with all the images
