@@ -27,7 +27,7 @@ with mic as source:
  
 result = r.recognize_google(audio)      # speech recognition
 
-with open('speechtotext.txt',mode ='w') as file:    # export the result 
+with open("D:\Own Work\Python Project\Suite-Converter\Output Directory\speechtotext.txt",mode ='w') as file:    # export the result 
    file.write(result) 
 
 print("Your file has been converted successfully!".center(400))
