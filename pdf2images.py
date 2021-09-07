@@ -1,8 +1,10 @@
 import fitz  # PDF Manipulation
 import pyttsx3  # Conversion of Text to Speech
-
+import config
 
 # Initialization of Audio Engine
+
+
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
@@ -18,10 +20,11 @@ engine.setProperty('voice', voices[1].id)
 engine.setProperty('rate', 145)
 
 
-print("Enter name of the file with extension")
+print("Enter name of the file without extension")
 speak("Enter name of the file with extension")
-name = r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Input Directory\\"+input() + \
-    ".pdf"
+# name = r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Input Directory\\"+input() + \
+#     ".pdf"
+name = config.inputpath+input()+".pdf"
 doc = fitz.open(name)  # Opening the Pdf file
 
 for i in range(len(doc)):
@@ -30,8 +33,9 @@ for i in range(len(doc)):
         pix = fitz.Pixmap(doc, xref)
         if pix.n < 5:       # this is GRAY or RGB
             # saving the images
-            pix.writePNG(
-                r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Output Directory\Image-%s.png" % (i))
+            # pix.writePNG(
+            #     r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Output Directory\Image-%s.png" % (i))
+            pix.writePNG(config.outputpath+"Image-%s.png" % (i))
         else:               # CMYK: convert to RGB first
             pix1 = fitz.Pixmap(fitz.csRGB, pix)
             pix1.writePNG("converted%s.png" % (i))  # saving the images
