@@ -24,11 +24,10 @@ def speak(audio):
 # Voice Automation
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-
 # String identifier of the active voice
-engine.setProperty('voice', voices[1].id)
+engine.setProperty('voice', voices[-1].id)
 # Integer speech rate in words per minute, can be increased or decreased to change speed of speech
-engine.setProperty('rate', 250)
+engine.setProperty('rate', 200)
 
 # Introduction
 print("Welcome to the Suite Converter\n".center(400))
@@ -84,31 +83,31 @@ if __name__ == "__main__":
     while (1):
         query = takecom()
 
-        if "1" in query:
+        if "1" or "A" in query:
             # Calling file for docx to pdf conversion
             call(["python", "doc2pdf.py"])
             print("Your file has been converted successfully".center(400))
 
-        elif "2" in query:
+        elif "2" or "B" in query:
             call(["python", "pdf2doc.py"])  # Calling file for pdf to docx
 
-        elif "3" in query:
+        elif "3" or "C" in query:
             # Calling file for Text to speech
             call(["python", "text2speech.py"])
 
-        elif "4" in query:
+        elif "4" or "D" in query:
             # Calling file for speech to text
             call(["python", "speech2text.py"])
 
-        elif "5" in query or '5' in query:
+        elif "5" or "E" in query or '5' in query:
             # Calling file for multiple images to pdf
             call(["python", "images2pdf.py"])
 
-        elif "6" in query or 'six' in query:
+        elif "6" or "F" in query or 'six' in query:
             # Calling file for pdf to multiple images
             call(["python", "pdf2images.py"])
 
-        elif "7" in query:
+        elif "7" or "G" in query:
             call(["python", "imageconv.py"])  # Interconversion of Images
 
         elif query == 'none':  # If no choice given
