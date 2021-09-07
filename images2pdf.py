@@ -16,7 +16,7 @@ voices = engine.getProperty('voices')
 # String identifier of the active voice
 engine.setProperty('voice', voices[1].id)
 # Integer speech rate in words per minute, can be increased or decreased to change speed of speech
-engine.setProperty('rate', 145)
+engine.setProperty('rate', 200)
 
 
 print("Enter number of images to be compiled")
