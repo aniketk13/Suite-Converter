@@ -1,6 +1,6 @@
 from docx2pdf import convert  # Conversion of document to pdf module
 import pyttsx3  # Conversion of Text to Speech
-
+import config
 # Initialization of Audio Engine
 
 
@@ -21,9 +21,11 @@ engine.setProperty('rate', 145)
 print("Enter the name of file without extension:")
 speak("Enter the name of file without extension")
 name = input()
-docfile = r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Input Directory\\"+name+".docx"
-address = r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Output Directory\\" + \
-    name+"-converted.pdf"
+# docfile = r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Input Directory\\"+name+".docx"
+docfile = (config.inputpath+name+".docx")
+# address = r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Output Directory\\" + \
+#     name+"-converted.pdf"
+address = config.outputpath+name+"-converted.pdf"
 
 convert(docfile, address)
 
