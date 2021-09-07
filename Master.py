@@ -9,7 +9,6 @@ import pyttsx3  # Conversion of Text to Speech
 import string  # String Module
 import fitz  # PDF Manipulation
 import sys  # System Module
-import doc2pdf
 import config
 
 # settings.init()
