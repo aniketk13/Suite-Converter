@@ -1,49 +1,35 @@
 from subprocess import call  # Calling different files in one file
 import time  # Module for delay
 import speech_recognition as sr  # Speech Recognition
-import pyttsx3  # Conversion of Text to Speech
 import sys  # System Module
+import audioengine  # importing audio engine
 
-
-# Initialization of Audio Engine
-def speak(audio):
-    engine.say(audio)
-    engine.runAndWait()
-
-
-# Voice Automation
-engine = pyttsx3.init('sapi5')
-voices = engine.getProperty('voices')
-# String identifier of the active voice
-engine.setProperty('voice', voices[-1].id)
-# Integer speech rate in words per minute, can be increased or decreased to change speed of speech
-engine.setProperty('rate', 200)
 
 # Introduction
 print("Welcome to the Suite Converter\n".center(400))
-speak("Welcome to the Suite Converter")
+audioengine.speak("Welcome to the Suite Converter")
 print("Following are the Services we provide:")
-speak("Following are the Services we provide")
+audioengine.speak("Following are the Services we provide")
 print("\n A.Document to PDF")
-speak("Document to PDF")
+audioengine.speak("Document to PDF")
 print("\n B.PDF to Document")
-speak("PDF to Document")
+audioengine.speak("PDF to Document")
 print("\n C.Text to Audio file")
-speak("Text to Audio file")
+audioengine.speak("Text to Audio file")
 print("\n D.Voice to Text file")
-speak("Voice to Text file")
+audioengine.speak("Voice to Text file")
 print("\n E.Compiling multiple Images to PDF")
-speak("Compiling multiple Images to PDF")
+audioengine.speak("Compiling multiple Images to PDF")
 print("\n F.Extraction of multiple Images from a PDF")
-speak("Extraction of multiple Images from a PDF")
+audioengine.speak("Extraction of multiple Images from a PDF")
 print("\n G.Inter conversion of Images\n\n")
-speak("Inter conversion of Images")
+audioengine.speak("Inter conversion of Images")
 time.sleep(1)
 # Taking choice as input in audio form and converting to text
 
 
 def takecom():
-    speak("Enter the option")
+    audioengine.speak("Enter the option")
     choiceinput = (input("Enter the option....\n".center(400)))
     return choiceinput
 
@@ -89,14 +75,14 @@ if __name__ == "__main__":
             continue
 
         print("Do you want to convert again?(Yes/No)")
-        speak("Do you want to convert again")
+        audioengine.speak("Do you want to convert again")
 
         def takech():
             # Listening the choice in audio form
             r = sr.Recognizer()
             with sr.Microphone() as source:
                 print("Say the option....\n".center(400))
-                speak("Say Yes or No")
+                audioengine.speak("Say Yes or No")
                 audio = r.listen(source)
 
             # Recognising and converting the choice in text
@@ -107,7 +93,7 @@ if __name__ == "__main__":
 
             # Backup if choice not understood
             except Exception:
-                speak("Error...")
+                audioengine.speak("Error...")
                 print("Try Again..")
             return text
 
@@ -117,7 +103,7 @@ if __name__ == "__main__":
             continue
 
         print("Thank You for converting".center(400))
-        speak("Thank you for converting")
+        audioengine.speak("Thank you for converting")
         print("Developed by Team <define>".center(500))
-        speak("Developed by Team Define")
+        audioengine.speak("Developed by Team Define")
         sys.exit()
