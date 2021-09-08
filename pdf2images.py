@@ -1,6 +1,6 @@
 import fitz  # PDF Manipulation
 import pyttsx3  # Conversion of Text to Speech
-import config  # Inporting File Path
+import config  # Importing File Path
 
 
 # Initialization of Audio Engine
