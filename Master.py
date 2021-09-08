@@ -9,13 +9,9 @@ import pyttsx3  # Conversion of Text to Speech
 import string  # String Module
 import fitz  # PDF Manipulation
 import sys  # System Module
-import config
 
-# settings.init()
 
 # Initialization of Audio Engine
-
-
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
@@ -84,12 +80,13 @@ if __name__ == "__main__":
         query = takecom()
 
         if "1" or "A" in query:
+
             # Calling file for docx to pdf conversion
             call(["python", "doc2pdf.py"])
-            print("Your file has been converted successfully".center(400))
+            # print("Your file has been converted successfully".center(400))
 
         elif "2" or "B" in query:
-            call(["python", "pdf2doc.py"])  # Calling file for pdf to docx
+            call(["python", "pdf2doc.py"])      # Calling file for pdf to docx
 
         elif "3" or "C" in query:
             # Calling file for Text to speech
