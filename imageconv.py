@@ -1,6 +1,6 @@
 from PIL import Image  # Image Recognition
 import pyttsx3  # Conversion of Text to Speech
-import config
+import config       # Importing input and output directory paths
 
 # Initialization of Audio Engine
 
@@ -19,30 +19,31 @@ engine.setProperty('voice', voices[1].id)
 # Integer speech rate in words per minute, can be increased or decreased to change speed of speech
 engine.setProperty('rate', 200)
 
+print("Interconversion of images".center(400))
+speak("Interconversion of images")
 
 print("Enter the file name without extension:")
 speak("Enter the file name without extension")
-name2 = input()
+filename = input()
 print("Enter current file's extension:")
 speak("Enter current file's extension")
-name4 = input()
+fileextension = input()
 
-# file1 = "D:\Own Work\Python Project\Suite-Converter\Input Directory\\"+ name2 + name4
-file1 = config.inputpath + name2 + name4
+inputfile = config.inputpath + filename + \
+    fileextension     # Saving the input file path
 
 print("Enter the extension in which you want your new file:")
 speak("Enter the extension in which you want your new file")
-name3 = input()
+newextension = input()
 
-# file2 = "D:\Own Work\Python Project\Suite-Converter\Output Directory\\" + name2 + name3
-file2 = config.outputpath + name2 + name3
+file2 = config.outputpath + filename + \
+    newextension     # Saving the output file path
 
-# im = Image.open(name2+name4)        #Opening the image file that is to be converted
-im = Image.open(file1)  # Opening the image file that is to be converted
+im = Image.open(inputfile)  # Opening the image file that is to be converted
 
 rgb_im = im.convert('RGB')  # Converting RGBA image into RGB type
-# rgb_im.save(name2+name3)            #Saving the new converted image
 
 rgb_im.save(file2)  # Saving the new converted image
 
 print("Your file has been converted successfully".center(400))
+speak("Your file has been converted successfully")
