@@ -45,3 +45,4 @@ for i in range(len(doc)):
         pix = None
 
 print("Your file has been converted successfully".center(400))
+speak("Your file has been converted successfully")

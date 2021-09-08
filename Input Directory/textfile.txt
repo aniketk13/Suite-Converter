@@ -1,1 +1,2 @@
-Hello this a sample text file
+Hi, this is a sample text file.
+

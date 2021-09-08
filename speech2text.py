@@ -1,6 +1,6 @@
 import speech_recognition as sr  # Speech Recognition
 import pyttsx3  # Conversion of Text to Speech
-import config
+import config       # Importing input and output directory paths
 
 # Initialization of Audio Engine
 
@@ -24,6 +24,9 @@ r = sr.Recognizer()
 
 mic = sr.Microphone(device_index=0)     # define the microphone
 
+print("Converting speech to text".center(400))
+speak("Converting speech to text")
+
 print("Please start speaking....")      # record your speech
 speak("Please start speaking")
 with mic as source:
@@ -31,8 +34,6 @@ with mic as source:
 
 result = r.recognize_google(audio)      # speech recognition
 
-# with open("D:\Own Work\Python Project\Suite-Converter\Output Directory\speechtotext.txt",mode ='w') as file:    # export the result
-#    file.write(result)
 with open(config.outputpath+"speechtotext.txt", mode='w') as file:    # export the result
     file.write(result)
 

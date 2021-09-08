@@ -1,13 +1,7 @@
 from subprocess import call  # Calling different files in one file
 import time  # Module for delay
-from docx2pdf import convert  # Conversion of document to pdf
-from pdf2docx import Converter  # Conversion of Pdf to Document
-from gtts import gTTS  # Conversion of Google Text to Speech
-from PIL import Image  # Image Recognition
 import speech_recognition as sr  # Speech Recognition
 import pyttsx3  # Conversion of Text to Speech
-import string  # String Module
-import fitz  # PDF Manipulation
 import sys  # System Module
 
 
@@ -49,26 +43,8 @@ time.sleep(1)
 
 
 def takecom():
-
-    # Listening the choice in audio form
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        # print("Enter the option....\n".center(400))
-        # audio = r.listen(source)
-        speak("Enter the option")
-        choiceinput = (input("Enter the option....\n".center(400)))
-
-    # # Recognising and converting the choice in text
-    # try:
-    #     print("Recognising....")
-    #     text = r.recognize_google(audio, language='en-in')
-    #     print(text, "\n")
-
-    # # Backup if choice not understood
-    # except Exception:
-    #     speak("Error...")
-    #     print("Try Again..")
-    #     return "none"
+    speak("Enter the option")
+    choiceinput = (input("Enter the option....\n".center(400)))
     return choiceinput
 
 
@@ -80,10 +56,8 @@ if __name__ == "__main__":
         query = takecom()
 
         if "1" or "A" in query:
-
             # Calling file for docx to pdf conversion
             call(["python", "doc2pdf.py"])
-            # print("Your file has been converted successfully".center(400))
 
         elif "2" or "B" in query:
             call(["python", "pdf2doc.py"])      # Calling file for pdf to docx
@@ -113,8 +87,6 @@ if __name__ == "__main__":
         else:
             print("Invalid Input")  # If incorrect choice given
             continue
-
-        speak("Your file has been converted successfully")
 
         print("Do you want to convert again?(Yes/No)")
         speak("Do you want to convert again")

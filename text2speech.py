@@ -1,6 +1,5 @@
-from gtts import gTTS  # Conversion of Google Text to Speech
 import pyttsx3  # Conversion of Text to Speech
-import config
+import config       # Importing input and output directory paths
 
 # Initialization of Audio Engine
 
@@ -19,20 +18,22 @@ engine.setProperty('voice', voices[1].id)
 # Integer speech rate in words per minute, can be increased or decreased to change speed of speech
 engine.setProperty('rate', 200)
 
+print("Converting text to speech".center(400))
+speak("Converting text to speech")
 
 print("Enter name of the file without extension:\n")
 speak("Enter name of the file without extension")
-# inputdir = r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Input Directory\\"
-inputdir = config.inputpath
-name1 = input()
+
+filename = input()
 # Opening the text file and reading the text
-with open(inputdir+name1+".txt", encoding="utf-8") as file:
+with open(config.inputpath+filename+".txt", encoding="utf-8") as file:
     file = file.read()
 
-speak = gTTS(file, lang='en')  # Speaking text to audio
 # Saving the converted audio file
-# speak.save(r"C:\Users\Pranav\OneDrive\Desktop\Suite-Converter\Output Directory\\" +
-#            name1+"converted.mp3")
-speak.save(config.outputpath + name1+"converted.mp3")
+engine.save_to_file(file, config.outputpath +
+                    filename+"converted.mp3")
+engine.runAndWait()
+
 
 print("Your file has been converted successfully".center(400))
+speak("Your file has been converted successfully")
