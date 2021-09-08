@@ -20,20 +20,20 @@ engine.setProperty('voice', voices[1].id)
 engine.setProperty('rate', 200)
 
 
-r = sr.Recognizer()
-
-mic = sr.Microphone(device_index=0)     # define the microphone
+# define the microphone
 
 print("Converting speech to text".center(400))
 speak("Converting speech to text")
 
+r = sr.Recognizer()
+with sr.Microphone() as source:
+    audio = r.listen(source)
 print("Please start speaking....")      # record your speech
 speak("Please start speaking")
-with mic as source:
-    audio = r.listen(source)
 
-result = r.recognize_google(audio)      # speech recognition
-
+result = r.recognize_google(audio, language='en-us')      # speech recognition
+print("Recording Stopped")
+print("Converting to Text File")
 with open(config.outputpath+"speechtotext.txt", mode='w') as file:    # export the result
     file.write(result)
 

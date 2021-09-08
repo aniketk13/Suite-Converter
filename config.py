@@ -1,5 +1,5 @@
 # setting.py
 
-inputpath = r"D:\Development\Suite-Converter\Input Directory\\"
+inputpath = r"C:\Users\Pranav\OneDrive\Documents\Suite-Converter\Input Directory\\"
 
-outputpath = r"D:\Development\Suite-Converter\Output Directory\\"
+outputpath = r"C:\Users\Pranav\OneDrive\Documents\Suite-Converter\Output Directory\\"
