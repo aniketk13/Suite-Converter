@@ -1,6 +1,6 @@
 # setting.py
 import os
 
-inputpath = os.getcwd()+"\Input Directory\\"
+inputpath = os.getcwd()+r"\Input Directory\\"
 
-outputpath = os.getcwd()+"\Output Directory\\"
+outputpath = os.getcwd()+r"\Output Directory\\"
