@@ -1,5 +1,7 @@
 # setting.py
+import os
 
-inputpath = r"C:\Users\Pranav\OneDrive\Documents\Suite-Converter\Input Directory\\"
+print(os.getcwd())
+inputpath = os.getcwd()+"\Input Directory\\"
 
-outputpath = r"C:\Users\Pranav\OneDrive\Documents\Suite-Converter\Output Directory\\"
+outputpath = os.getcwd()+"\Output Directory\\"
