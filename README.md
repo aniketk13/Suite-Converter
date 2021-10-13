@@ -1,6 +1,6 @@
 # Suite-Converter-Python
 ### Smart solution to convert your files from one format to another.
-<div align="center"><img src="https://cdn.discordapp.com/attachments/897883141367292044/897893299162087544/unknown.png" width="480"></div>
+<div align="center"><img src="https://cdn.discordapp.com/attachments/897883141367292044/897893299162087544/unknown.png" width="900"></div>
 
 
 In-built Interactive Voice-Assistant, Say Hello :)
