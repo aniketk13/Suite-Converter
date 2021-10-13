@@ -9,7 +9,7 @@ In-built Interactive Voice-Assistant, Say Hello :)
 - Record your voice & changes it into a text file and convert it into any desired format.
 - To make an audio book, upload the text file and listen it  ``` .mp3 ``` file format.
 ## Features
-<div align="center"><img src="Images/vision.JPG" width="580"></div>
+<div align="center"><img src="https://cdn.discordapp.com/attachments/897883141367292044/897885242587754516/unknown.png" width="580"></div>
 
 # Requirements
 ![python](https://img.shields.io/badge/Python-3.9-orange)                   ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-2019-blue)
