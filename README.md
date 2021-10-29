@@ -39,8 +39,9 @@ pip install SpeechRecognition
 pip install pysttx3
 ```
 ### Refer-link
+Watch the Youtube Video Below to Install Python Libraries.
 [![Youtube](https://img.shields.io/badge/-Youtube%20-red)](https://youtu.be/FKwicZF7xNE)
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
+[![Watch the video](https://i.ytimg.com/vi/FKwicZF7xNE/hq720.jpg)](https://youtu.be/FKwicZF7xNE)
 
 # Connect-With-Us-On-Linkedin
 ![LINKEDIN](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
