@@ -40,7 +40,7 @@ pip install pysttx3
 ```
 ### Refer-link
 [![Youtube](https://img.shields.io/badge/-Youtube%20-red)](https://youtu.be/FKwicZF7xNE)
-<iframe width="853" height="480" src="https://www.youtube.com/embed/FKwicZF7xNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 # Connect-With-Us-On-Linkedin
 ![LINKEDIN](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
