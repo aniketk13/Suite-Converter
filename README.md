@@ -5,9 +5,9 @@
 
 In-built Interactive Voice-Assistant, Say Hello :)
 - Change ```.pdf ``` files to ``` .docx ``` & ``` .txt ```
-- convert image format into ``` .png ``` to ``` .jpeg/.jpg ``` [vice-versa]
-- Record your voice & changes it into a text file and convert it into any desired format.
-- To make an audio book, upload the text file and listen it  ``` .mp3 ``` file format.
+- Convert Image format into ``` .png ``` to ``` .jpeg/.jpg ``` [vice-versa]
+- Record your Voice & changes it into a text file and convert it into any desired format.
+- To make an Audio book, upload the text file and listen it  ``` .mp3 ``` file format.
 ## Features
 <div align="center"><img src="https://cdn.discordapp.com/attachments/897883141367292044/897893128575529070/unknown.png" width="900"></div>
 
